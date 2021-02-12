@@ -128,9 +128,9 @@
                 </button>
                 <div id="dropdown" class="dropdown-menu" style="width:60vw;">
                 <center>
-                    <p class="my-2">Key: <?php echo $head;?></p>
-                    <div class="my-2"><button class="btn btn-warning" onclick="regenerate(1)">Regenerate Key</button><div>
-                    <div class="my-2"><button class="btn btn-danger" onclick="disable(1)" <?php if($disabledHead) {echo 'disabled';} ?>>Disable Key</button></div>
+                    <p class="my-2 dropdown-item">Key: <?php echo $head;?></p>
+                    <div class="my-2 dropdown-item"><button class="btn btn-warning" onclick="regenerate(1)">Regenerate Key</button><div>
+                    <div class="my-2 dropdown-item"><button class="btn btn-danger" onclick="disable(1)" <?php if($disabledHead) {echo 'disabled';} ?>>Disable Key</button></div>
                 </center>
                 </div>
             </div>
@@ -140,23 +140,23 @@
                 </button>
                 <div id="dropdown" class="dropdown-menu" style="width:60vw;">
                 <center>
-                    <p class="my-2">Key: <?php echo $assistant;?></p>
-                    <div class="my-2"><button class="btn btn-warning" onclick="regenerate(2)">Regenerate Key</button><div>
-                    <div class="my-2"><button class="btn btn-danger" onclick="disable(2)" <?php if($disabledAssistant) {echo 'disabled';} ?>>Disable Key</button></div>
-                    <div class="my-2"><a href="permissions/assistant.php"><button class="btn btn-success">Edit Permissions</button></div>
+                    <p class="my-2 dropdown-item">Key: <?php echo $assistant;?></p>
+                    <div class="my-2 dropdown-item"><button class="btn btn-warning" onclick="regenerate(2)">Regenerate Key</button><div>
+                    <div class="my-2 dropdown-item"><button class="btn btn-danger" onclick="disable(2)" <?php if($disabledAssistant) {echo 'disabled';} ?>>Disable Key</button></div>
+                    <div class="my-2 dropdown-item"><a href="permissions/assistant.php"><button class="btn btn-success">Edit Permissions</button></a></div>
                 </center>
                 </div>
             </div>    
             <div class="btn-group py-3">
                 <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:60vw;">
-                    Coach / Mentor
+                    Coach/Mentor
                 </button>
                 <div id="dropdown" class="dropdown-menu" style="width:60vw;">
                 <center>
-                    <p class="my-2">Key: <?php echo $coach;?></p>
-                    <div class="my-2"><button class="btn btn-warning" onclick="regenerate(3)">Regenerate Key</button><div>
-                    <div class="my-2"><button class="btn btn-danger" onclick="disable(3)" <?php if($disabledCoach) {echo 'disabled';} ?>>Disable Key</button></div>
-                    <div class="my-2"><a href="permissions/coach.php"><button class="btn btn-success">Edit Permissions</button></div>
+                    <p class="my-2 dropdown-item">Key: <?php echo $coach;?></p>
+                    <div class="my-2 dropdown-item"><button class="btn btn-warning" onclick="regenerate(3)">Regenerate Key</button><div>
+                    <div class="my-2 dropdown-item"><button class="btn btn-danger" onclick="disable(3)" <?php if($disabledCoach) {echo 'disabled';} ?>>Disable Key</button></div>
+                    <div class="my-2 dropdown-item"><a href="permissions/coach.php"><button class="btn btn-success">Edit Permissions</button></a></div>
                 </center>
                 </div>
             </div>    
@@ -166,10 +166,10 @@
                 </button>
                 <div id="dropdown" class="dropdown-menu" style="width:60vw;">
                 <center>
-                    <p class="my-2">Key: <?php echo $basic;?></p>
-                    <div class="my-2"><button class="btn btn-warning" onclick="regenerate(4)">Regenerate Key</button><div>
-                    <div class="my-2"><button class="btn btn-danger" onclick="disable(4)" <?php if($disabledBasic) {echo 'disabled';} ?>>Disable Key</button></div>
-                    <div class="my-2"><a href="permissions/basic.php"><button class="btn btn-success">Edit Permissions</button></div>
+                    <p class="my-2 dropdown-item">Key: <?php echo $basic;?></p>
+                    <div class="my-2 dropdown-item"><button class="btn btn-warning" onclick="regenerate(4)">Regenerate Key</button><div>
+                    <div class="my-2 dropdown-item"><button class="btn btn-danger" onclick="disable(4)" <?php if($disabledBasic) {echo 'disabled';} ?>>Disable Key</button></div>
+                    <div class="my-2 dropdown-item"><a href="permissions/basic.php"><button class="btn btn-success">Edit Permissions</button></a></div>
                 </center>
                 </div>
             </div>    
@@ -180,9 +180,9 @@
                 <div id="dropdown" class="dropdown-menu" style="width:60vw;">
                 <center>
                     <p class="my-2">Key: <?php echo $other;?></p>
-                    <div class="my-2"><button class="btn btn-warning" onclick="regenerate(5)">Regenerate Key</button><div>
-                    <div class="my-2"><button class="btn btn-danger" onclick="disable(5)" <?php if($disabledOther) {echo 'disabled';} ?>>Disable Key</button></div>
-                    <div class="my-2"><a href="permissions/other.php"><button class="btn btn-success">Edit Permissions</button></div>
+                    <div class="my-2 dropdown-item"><button class="btn btn-warning" onclick="regenerate(5)">Regenerate Key</button><div>
+                    <div class="my-2 dropdown-item"><button class="btn btn-danger" onclick="disable(5)" <?php if($disabledOther) {echo 'disabled';} ?>>Disable Key</button></div>
+                    <div class="my-2 dropdown-item"><a href="permissions/other.php"><button class="btn btn-success">Edit Permissions</button></a></div>
                 </center>
                 </div>
             </div>                     
