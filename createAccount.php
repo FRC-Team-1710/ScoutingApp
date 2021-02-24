@@ -43,29 +43,29 @@
                     <b class="text-white">First Name:</b>
                 </label>
                 <div class="col-xs-12 pt-1">
-                    <input type="text" autocomplete="off" placeholder="Enter your first name" name="fname" required>
+                    <input type="text" autocomplete="off" placeholder="Enter your first name" name="fname" maxlength="16" required>
                 </div>
                 <label for="lname" class="pt-2">
                     <b class="text-white">Last Name:</b>
                 </label>
                 <div class="col-xs-12 pt-1">
-                    <input type="text" autocomplete="off" placeholder="Enter your last name" name="lname" required>
+                    <input type="text" autocomplete="off" placeholder="Enter your last name" name="lname" maxlength="24" required>
                 </div>
                 <label for="uname" class="pt-2">
                     <b class="text-white">Username:</b>
                 </label>
                 <div class="col-xs-12 pt-1">
-                    <input type="text" autocomplete="off" placeholder="Enter Username" name="uname" required>
+                    <input type="text" autocomplete="off" placeholder="Enter Username" name="uname" maxlength="16" required>
                 </div>
                 <label for="psw" class="pt-2">
                     <b class="text-white">Password:</b>
                 </label>
                 <div class="col-xs-12 pt-1">
-                    <input id="input1" autocomplete="off" type="password" style="position:relative; left:12px;" placeholder="Enter Password" name="psw" required>
+                    <input id="input1" autocomplete="off" type="password" style="position:relative; left:12px;" maxlength="32" placeholder="Enter Password" name="psw" required>
                     <i  id="eye1" class="fas fa-eye" style="position:relative; right:20px;" onclick="togglePasswordDisplay('input1', 'eye1');"></i>
                 </div>
                 <div class="col-xs-12 pt-1">
-                    <input id="input2" autocomplete="off" type="password" style="position:relative; left:12px;" placeholder="Retype Password" name="pswd" required>
+                    <input id="input2" autocomplete="off" type="password" style="position:relative; left:12px;" maxlength="32" placeholder="Retype Password" name="pswd" required>
                     <i  id="eye2" class="fas fa-eye" style="position:relative; right:20px;" onclick="togglePasswordDisplay('input2', 'eye2');"></i>
                 </div>
                 <label for="authKey" class="pt-2">

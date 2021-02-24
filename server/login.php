@@ -66,6 +66,8 @@ if($loginCheck) {
         $_SESSION["lName"] = $row["LastName"];
         $_SESSION["perms"] = $row["Permissions"];
         $_SESSION["Team"] = $row["Team"];
+        $loginCount = $row["loginCount"];
+        $loginCount++;
         if($row["Shekels"] == 69420) {
             $_SESSION["shekelCount"] = 68000;
         } else {        
@@ -73,6 +75,12 @@ if($loginCheck) {
         }
         $_SESSION["isSessionValid"] = true;
     }
+
+    $sql = "UPDATE users SET loginCount='$loginCount' WHERE Username='$uname'";
+    $result = $conn->query($sql);
+
+
+
     header('Location: ../hub.php');
 }
 

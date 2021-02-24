@@ -35,15 +35,12 @@
             <div class="form-group pb-3 mt-4">
                 <textarea class="form-control" id="feedback" name="feedback" placeholder="Insert your feedback here" rows="3"></textarea>
             </div>
-            <div class="form-check mb-4">
-                <input type="checkbox" name="codebreaker" class="form-check-input" id="codebreaker" onclick="reallyDelete();">
-                <label class="form-check-label text-white" for="codebreaker">This feedback is in regards to a bug on the site.</label>
-            </div>
             <div class="col-xs-12">
                 <button type="submit" class="btn btn-success btn-lg">Submit Feedback</button>
             </div>
         </form>
         <br>
+        
         <div class="col-xs-12">
             <a href="hub.php">
                 <button type="button" class="btn btn-success">Back to Hub</button>
