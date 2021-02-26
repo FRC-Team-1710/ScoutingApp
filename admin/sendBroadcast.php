@@ -21,28 +21,18 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT * FROM users WHERE Team = ?";
+    $msg = $_POST["broadcast"];
+    $team = $_SESSION["Team"];
+    $perms = $_POST["perms"];
+    $author = $_SESSION["fName"] . $_SESSION["lName"];
+    $time = date("h:i");
+
+    $sql = "INSERT INTO Notifications (Team, Permission, Author, Message, Time) VALUES ('$team', '$perms', '$author', ?, '$time')";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)) {
         echo "There was an error";
     } else {
-        mysqli_stmt_bind_param($stmt, "i", $_SESSION["Team"]);
+        mysqli_stmt_bind_param($stmt, "s", $msg);
         mysqli_stmt_execute($stmt);
-        $result = mysqli_stmt_get_result($stmt);
-    }
-    while($row = $result->fetch_assoc()) {
-        $id = $row["UserID"];
-        $broadcast = $row["Notifications"] . $_SESSION["fName"] . " " . $_SESSION["lName"] . ":" . $_POST["broadcast"] . "*";
-        $sql = "UPDATE users SET Notifications = ? WHERE UserID = '$id'";
-        $stmt = mysqli_stmt_init($conn);
-        if(!mysqli_stmt_prepare($stmt, $sql)) {
-            echo "There was an error";
-        } else {
-            mysqli_stmt_bind_param($stmt, "s", $broadcast);
-            mysqli_stmt_execute($stmt);
-            $_SESSION["alert"] = true;
-            $_SESSION["prompt"] = "Broadcast transmitted";
-            header('Location: broadcast.php');
-        }    
     }
 ?>

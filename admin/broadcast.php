@@ -34,6 +34,29 @@
             <div class="form-group pb-3 mt-4">
                 <textarea class="form-control" id="broadcast" name="broadcast" placeholder="Put your message here" rows="3"></textarea>
             </div>
+            <label class="text-white">
+                <b>Who should this message go to?</b>
+            </label>
+            <div class="form-check pt-3">
+                <label style="font-size:130%" class="mr-2 form-check-label text-white text-left" for="headScout">Head Scout</label>
+                <input style="width:6%;height:45%;right:15vw" type="checkbox" name="headScout" class="ml-2 form-check-input" id="headScout">
+            </div>
+            <div class="form-check pt-3">
+                <label style="font-size:130%" class="mr-2 form-check-label text-white" for="assistantScout">Assistant Head Scout</label>
+                <input style="width:6%;height:45%;right:15vw" type="checkbox" name="assistantScout" class="ml-2 form-check-input" id="assistantScout">
+            </div>
+            <div class="form-check pt-3">
+                <label style="font-size:130%" class="mr-2 form-check-label text-white" for="coach">Coaches / Mentors</label>
+                <input style="width:6%;height:45%;right:15vw" type="checkbox" name="coach" class="ml-2 form-check-input" id="coach">
+            </div>
+            <div class="form-check pt-3">
+                <label style="font-size:130%" class="mr-2 form-check-label text-white" for="basicScout">Basic Scouts</label>
+                <input style="width:6%;height:45%;right:15vw" type="checkbox" name="basicScout" class="ml-2 form-check-input" id="basicScout">
+            </div>
+            <div class="form-check pt-3">
+                <label style="font-size:130%" class="mr-2 form-check-label text-white" for="other">Other</label>
+                <input style="width:6%;height:45%;right:15vw" type="checkbox" name="other" class="ml-2 form-check-input" id="other">
+            </div>
             <div class="col-xs-12">
                 <button type="submit" class="btn btn-success btn-lg">Broadcast Message</button>
             </div>
