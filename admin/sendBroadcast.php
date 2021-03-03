@@ -9,6 +9,8 @@
         }
     }
 
+    date_default_timezone_set('America/North_Dakota/Center');
+
     $servername = "localhost";
     $username = "mattbzco_779ccb2";
     $password = "q1w2E#R$";
@@ -23,11 +25,29 @@
 
     $msg = $_POST["broadcast"];
     $team = $_SESSION["Team"];
-    $perms = $_POST["perms"];
-    $author = $_SESSION["fName"] . $_SESSION["lName"];
+    $perms = $_POST["perms"]; //REMOVE AFTER PERMS CREATION
+    $author = $_SESSION["fName"] . " " . $_SESSION["lName"];
     $time = date("h:i");
 
-    $sql = "INSERT INTO Notifications (Team, Permission, Author, Message, Time) VALUES ('$team', '$perms', '$author', ?, '$time')";
+    //Generate Permission Value
+    $perms = 100000;
+    if($_POST["headScout"] == "on") {
+        $perms += 10000;
+    }
+    if($_POST["assistantScout"] == "on") {
+        $perms += 1000;
+    }
+    if($_POST["coach"] == "on") {
+        $perms += 100;
+    }
+    if($_POST["basicScout"] == "on") {
+        $perms += 10;
+    }
+    if($_POST["other"] == "on") {
+        $perms += 1;
+    }
+
+    $sql = "INSERT INTO notifications (Team, Permission, Author, Message, Time) VALUES ('$team', '$perms', '$author', ?, '$time')";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)) {
         echo "There was an error";
@@ -35,4 +55,6 @@
         mysqli_stmt_bind_param($stmt, "s", $msg);
         mysqli_stmt_execute($stmt);
     }
+
+    header('Location: broadcast.php');
 ?>

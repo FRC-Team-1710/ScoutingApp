@@ -92,9 +92,9 @@
                 <a href="editSchedule.php"><button class="btn btn-success">Edit</button></a>
             </div>
             <hr style="border:1px solid white; width:80%">
-            <h5 class="text-white pt-3">Broadcast Message</h5>
+            <h5 class="text-white pt-3">Broadcast Center</h5>
             <div class="col-xs-12 pt-3">
-                <a href="broadcast.php"><button class="btn btn-success">Broadcast</button></a>
+                <a href="broadcast.php"><button class="btn btn-success">Broadcast Message</button></a>
             </div>
             <hr style="border:1px solid white; width:80%">
             <?php

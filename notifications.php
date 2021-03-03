@@ -18,6 +18,7 @@
     }
 
     $team = $_SESSION["Team"];
+    $perms = $_SESSION["perms"];
 
     //Collect notifications
     $sql = "SELECT * FROM notifications WHERE Team = '$team'";
@@ -49,21 +50,37 @@
                     <?php
                         //Display notifications for each existing notification
                         while($row = $result->fetch_assoc()) {
-                            $author = $row["Author"];
-                            $msg = $row["Message"];
-                            $time = $row["Time"];
-                            echo '
-                            <tr>
-                                <td>
-                                    <strong>'.$author.': </strong>'.$msg.'
-                                </td>
-                                <td> '.$time.
-                                    // <div id="2" style="float:right;">
-                                    //     <i class="far fa-trash-alt" style="color:black;width:30px;height:30px"></i>
-                                    // </div>
-                                '</td>
-                            </tr>
-                            ';
+                            $validMessage = false;
+                            if($perms == 1 && ($row["Permission"]/10000)%2 != 0) {
+                                $validMessage = true;
+                            } else if($perms == 2 && ($row["Permission"]/1000)%2 != 0) {
+                                $validMessage = true;
+                            } else if($perms == 3 && ($row["Permission"]/100)%2 != 0) {
+                                $validMessage = true;
+                            } else if($perms == 4 && ($row["Permission"]/10)%2 != 0) {
+                                $validMessage = true;
+                            } else if($perms == 5 && ($row["Permission"]/1)%2 != 0) {
+                                $validMessage = true;
+                            } else if($perms == 6) {
+                                $validMessage = true;
+                            }
+                            if($validMessage) {
+                                $author = $row["Author"];
+                                $msg = $row["Message"];
+                                $time = $row["Time"];
+                                echo '
+                                <tr>
+                                    <td>
+                                        <strong>'.$author.': </strong>'.$msg.'
+                                    </td>
+                                    <td> '.$time.
+                                        // <div id="2" style="float:right;">
+                                        //     <i class="far fa-trash-alt" style="color:black;width:30px;height:30px"></i>
+                                        // </div>
+                                    '</td>
+                                </tr>
+                                ';
+                            }
                         }
                     ?>
                 </tbody>
