@@ -23,18 +23,32 @@
     var activeChecks = false;
     function toggleSelectAll() {
         if(!activeChecks) {
-            document.getElementById('headScout').setAttribute('checked', 'checked');
-            document.getElementById('assistantScout').setAttribute('checked', 'checked');
-            document.getElementById('coach').setAttribute('checked', 'checked');
-            document.getElementById('basicScout').setAttribute('checked', 'checked');
-            document.getElementById('other').setAttribute('checked', 'checked');
+            document.getElementById('headScout').checked = true;
+            document.getElementById('assistantScout').checked = true;
+            document.getElementById('coach').checked = true;
+            document.getElementById('basicScout').checked = true;
+            document.getElementById('other').checked = true;
             activeChecks = true;
         } else {
-            document.getElementById('headScout').setAttribute('checked', '');
-            document.getElementById('assistantScout').setAttribute('checked', '');
-            document.getElementById('coach').setAttribute('checked', '');
-            document.getElementById('basicScout').setAttribute('checked', '');
-            document.getElementById('other').setAttribute('checked', '');
+            document.getElementById('headScout').checked = false;
+            document.getElementById('assistantScout').checked = false;
+            document.getElementById('coach').checked = false;
+            document.getElementById('basicScout').checked = false;
+            document.getElementById('other').checked = false;
+            activeChecks = false;
+        }
+    }
+    function checkIfAllChecked() {
+        if(document.getElementById('headScout').checked &&
+           document.getElementById('assistantScout').checked &&
+           document.getElementById('coach').checked &&
+           document.getElementById('basicScout').checked &&
+           document.getElementById('other').checked)
+        {
+            document.getElementById('checkAll').checked = true;
+            activeChecks = true;
+        }else{
+            document.getElementById('checkAll').checked = false;
             activeChecks = false;
         }
     }
@@ -67,23 +81,23 @@
             </div>
             <div class="form-check pt-3">
                 <label style="font-size:130%" class="mr-2 form-check-label text-white text-left" for="headScout">Head Scout</label>
-                <input style="width:6%;height:45%;right:15vw" type="checkbox" name="headScout" class="ml-2 form-check-input" id="headScout">
+                <input style="width:6%;height:45%;right:15vw" type="checkbox" name="headScout" class="ml-2 form-check-input" id="headScout" onclick="checkIfAllChecked()">
             </div>
             <div class="form-check pt-3">
                 <label style="font-size:130%" class="mr-2 form-check-label text-white" for="assistantScout">Assistant Head Scout</label>
-                <input style="width:6%;height:45%;right:15vw" type="checkbox" name="assistantScout" class="ml-2 form-check-input" id="assistantScout">
+                <input style="width:6%;height:45%;right:15vw" type="checkbox" name="assistantScout" class="ml-2 form-check-input" id="assistantScout" onclick="checkIfAllChecked()">
             </div>
             <div class="form-check pt-3">
                 <label style="font-size:130%" class="mr-2 form-check-label text-white" for="coach">Coaches / Mentors</label>
-                <input style="width:6%;height:45%;right:15vw" type="checkbox" name="coach" class="ml-2 form-check-input" id="coach">
+                <input style="width:6%;height:45%;right:15vw" type="checkbox" name="coach" class="ml-2 form-check-input" id="coach" onclick="checkIfAllChecked()">
             </div>
             <div class="form-check pt-3">
                 <label style="font-size:130%" class="mr-2 form-check-label text-white" for="basicScout">Basic Scouts</label>
-                <input style="width:6%;height:45%;right:15vw" type="checkbox" name="basicScout" class="ml-2 form-check-input" id="basicScout">
+                <input style="width:6%;height:45%;right:15vw" type="checkbox" name="basicScout" class="ml-2 form-check-input" id="basicScout" onclick="checkIfAllChecked()">
             </div>
             <div class="form-check pt-3">
                 <label style="font-size:130%" class="mr-2 form-check-label text-white" for="other">Other</label>
-                <input style="width:6%;height:45%;right:15vw" type="checkbox" name="other" class="ml-2 form-check-input" id="other">
+                <input style="width:6%;height:45%;right:15vw" type="checkbox" name="other" class="ml-2 form-check-input" id="other" onclick="checkIfAllChecked()">
             </div>
             <div class="col-xs-12 pt-4">
                 <button type="submit" class="btn btn-success btn-lg">Broadcast Message</button>
