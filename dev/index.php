@@ -47,6 +47,11 @@
             </div>
             <hr style="border: 1px solid white; width:80%">
             <br>
+            <h5 class="text-white pt-3">Broadcast Message</h5>
+            <div class="col-xs-12 pt-3">
+                <a href="broadcast.php"><button class="btn btn-success">Broadcast</button></a>
+            </div>
+            <hr style="border:1px solid white; width:80%">
             <form action="giveDev.php" method="post">
                 <h5 class="text-white pt-3">Give Dev Abilities</h5>
                 <label for="username" class="pt-1">

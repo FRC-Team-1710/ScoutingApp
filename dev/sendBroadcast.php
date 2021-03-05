@@ -24,28 +24,12 @@
     }
 
     $msg = $_POST["broadcast"];
-    $team = $_SESSION["Team"];
-    $perms = $_POST["perms"]; //REMOVE AFTER PERMS CREATION
-    $author = $_SESSION["fName"] . " " . $_SESSION["lName"];
+    $team = 34522;
+    $author = "Developer Team";
     $time = date("h:i");
 
     //Generate Permission Value
-    $perms = 100000;
-    if($_POST["headScout"] == "on") {
-        $perms += 10000;
-    }
-    if($_POST["assistantScout"] == "on") {
-        $perms += 1000;
-    }
-    if($_POST["coach"] == "on") {
-        $perms += 100;
-    }
-    if($_POST["basicScout"] == "on") {
-        $perms += 10;
-    }
-    if($_POST["other"] == "on") {
-        $perms += 1;
-    }
+    $perms = 111111;
 
     $sql = "INSERT INTO notifications (Team, Permission, Author, Message, Time) VALUES ('$team', '$perms', '$author', ?, '$time')";
     $stmt = mysqli_stmt_init($conn);
@@ -55,8 +39,9 @@
         mysqli_stmt_bind_param($stmt, "s", $msg);
         mysqli_stmt_execute($stmt);
     }
+    $notification = 1;
 
-    $sql = "UPDATE users SET unreadNotification = 1 WHERE Team = '$team'";
+    $sql = "UPDATE users SET unreadNotification = '$notification'";
     $result = $conn->query($sql);
 
     header('Location: broadcast.php');
