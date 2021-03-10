@@ -17,6 +17,14 @@
     if($conn->connect_error) {
         die("Error: " . $conn->connect_error);
     }
+
+    $uname = $_SESSION["uName"];
+    $sql = "SELECT unreadNotification FROM users WHERE Username = '$uname'";
+    $result = $conn->query($sql);
+    while($row = $result->fetch_assoc()) {
+        $unreadNots = $row["unreadNotification"];
+    }
+
     $count = 0;
     $sql = "SELECT * FROM feedback WHERE isRead = 1";
     $result = $conn->query($sql);
@@ -79,7 +87,7 @@
                     </div>
                     <div class="col-xs-12 pt-3">
                         <a href="notifications.php">
-                            <button class="btn btn-primary">Notfications</button>
+                            <button class="btn btn-<?php if($unreadNots == 0) {echo "primary";} else {echo "warning";}?>">Notfications</button>
                         </a>
                     </div>
                     <?php
