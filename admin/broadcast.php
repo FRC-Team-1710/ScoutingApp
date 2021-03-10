@@ -52,6 +52,13 @@
             activeChecks = false;
         }
     }
+    function checkTextBoxValue(){
+        if(document.getElementById('broadcast').value){
+            document.getElementById('submitButton').disabled = false;
+        }else{
+            document.getElementById('submitButton').disabled = true;
+        }
+    }
     </script>
 </head>
 <body style="background-color:rgb(54,59,66);">
@@ -71,36 +78,38 @@
         ?>
         <form action="sendBroadcast.php" method="post">
             <div class="form-group pb-3 mt-4">
-                <textarea class="form-control" id="broadcast" name="broadcast" placeholder="Put your message here" rows="3"></textarea>
+                <textarea class="form-control" id="broadcast" name="broadcast" placeholder="Put your message here" rows="3" onkeyup="checkTextBoxValue()"></textarea>
             </div>
             <div class="form-check pt-3">
                 <label class="text-white">
                     <b style="font-size:20px">Who should this message go to?</b>
                 </label>
-                <input type="checkbox" name="checkAll" class="ml-2 form-check-input" onclick="toggleSelectAll()">
+            </div>
+            <div class="form-check py-3">
+                <input style="width:6%;height:45%;right:10vw" type="checkbox" id="checkAll" name="checkAll" class="ml-2 form-check-input" onclick="toggleSelectAll()">
             </div>
             <div class="form-check pt-3">
                 <label style="font-size:130%" class="mr-2 form-check-label text-white text-left" for="headScout">Head Scout</label>
-                <input style="width:6%;height:45%;right:15vw" type="checkbox" name="headScout" class="ml-2 form-check-input" id="headScout" onclick="checkIfAllChecked()">
+                <input style="width:6%;height:45%;right:10vw" type="checkbox" name="headScout" class="ml-2 form-check-input" id="headScout" onclick="checkIfAllChecked()">
             </div>
             <div class="form-check pt-3">
                 <label style="font-size:130%" class="mr-2 form-check-label text-white" for="assistantScout">Assistant Head Scout</label>
-                <input style="width:6%;height:45%;right:15vw" type="checkbox" name="assistantScout" class="ml-2 form-check-input" id="assistantScout" onclick="checkIfAllChecked()">
+                <input style="width:6%;height:45%;right:10vw" type="checkbox" name="assistantScout" class="ml-2 form-check-input" id="assistantScout" onclick="checkIfAllChecked()">
             </div>
             <div class="form-check pt-3">
                 <label style="font-size:130%" class="mr-2 form-check-label text-white" for="coach">Coaches / Mentors</label>
-                <input style="width:6%;height:45%;right:15vw" type="checkbox" name="coach" class="ml-2 form-check-input" id="coach" onclick="checkIfAllChecked()">
+                <input style="width:6%;height:45%;right:10vw" type="checkbox" name="coach" class="ml-2 form-check-input" id="coach" onclick="checkIfAllChecked()">
             </div>
             <div class="form-check pt-3">
                 <label style="font-size:130%" class="mr-2 form-check-label text-white" for="basicScout">Basic Scouts</label>
-                <input style="width:6%;height:45%;right:15vw" type="checkbox" name="basicScout" class="ml-2 form-check-input" id="basicScout" onclick="checkIfAllChecked()">
+                <input style="width:6%;height:45%;right:10vw" type="checkbox" name="basicScout" class="ml-2 form-check-input" id="basicScout" onclick="checkIfAllChecked()">
             </div>
             <div class="form-check pt-3">
                 <label style="font-size:130%" class="mr-2 form-check-label text-white" for="other">Other</label>
-                <input style="width:6%;height:45%;right:15vw" type="checkbox" name="other" class="ml-2 form-check-input" id="other" onclick="checkIfAllChecked()">
+                <input style="width:6%;height:45%;right:10vw" type="checkbox" name="other" class="ml-2 form-check-input" id="other" onclick="checkIfAllChecked()">
             </div>
             <div class="col-xs-12 pt-4">
-                <button type="submit" class="btn btn-success btn-lg">Broadcast Message</button>
+                <button type="submit" id="submitButton" class="btn btn-success btn-lg" disabled>Broadcast Message</button>
             </div>
         </form>
         <br>

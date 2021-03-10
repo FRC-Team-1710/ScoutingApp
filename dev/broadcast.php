@@ -36,6 +36,13 @@
             activeChecks = false;
         }
     }
+    function checkTextBoxValue(){
+        if(document.getElementById('broadcast').value){
+            document.getElementById('submitButton').disabled = false;
+        }else{
+            document.getElementById('submitButton').disabled = true;
+        }
+    }
     </script>
 </head>
 <body style="background-color:rgb(54,59,66);">
@@ -55,10 +62,10 @@
         ?>
         <form action="sendBroadcast.php" method="post">
             <div class="form-group pb-3 mt-4">
-                <textarea class="form-control" id="broadcast" name="broadcast" placeholder="Put your message here" rows="3"></textarea>
+                <textarea class="form-control" id="broadcast" name="broadcast" placeholder="Put your message here" rows="3" onkeyup="checkTextBoxValue()" required></textarea>
             </div>
             <div class="col-xs-12 pt-4">
-                <button type="submit" class="btn btn-success btn-lg">Broadcast Message</button>
+                <button type="submit" class="btn btn-success btn-lg" id="submitButton" disabled>Broadcast Message</button>
             </div>
         </form>
         <br>
