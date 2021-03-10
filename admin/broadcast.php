@@ -28,6 +28,7 @@
             document.getElementById('coach').checked = true;
             document.getElementById('basicScout').checked = true;
             document.getElementById('other').checked = true;
+            document.getElementById('checkAll').innerHTML = "Deselect All";
             activeChecks = true;
         } else {
             document.getElementById('headScout').checked = false;
@@ -35,6 +36,7 @@
             document.getElementById('coach').checked = false;
             document.getElementById('basicScout').checked = false;
             document.getElementById('other').checked = false;
+            document.getElementById('checkAll').innerHTML = "Select All";
             activeChecks = false;
         }
     }
@@ -45,10 +47,10 @@
            document.getElementById('basicScout').checked &&
            document.getElementById('other').checked)
         {
-            document.getElementById('checkAll').checked = true;
+            document.getElementById('checkAll').innerHTML = "Deselect All";
             activeChecks = true;
         }else{
-            document.getElementById('checkAll').checked = false;
+            document.getElementById('checkAll').innerHTML = "Select All";
             activeChecks = false;
         }
     }
@@ -86,7 +88,7 @@
                 </label>
             </div>
             <div class="form-check py-3">
-                <input style="width:6%;height:45%;right:10vw" type="checkbox" id="checkAll" name="checkAll" class="ml-2 form-check-input" onclick="toggleSelectAll()">
+                <button style="width:24vw;height:45%;right:10vw" type="button" id="checkAll" name="checkAll" class="ml-2 btn btn-primary btn-sm" onclick="toggleSelectAll()">Select All</button>
             </div>
             <div class="form-check pt-3">
                 <label style="font-size:130%" class="mr-2 form-check-label text-white text-left" for="headScout">Head Scout</label>

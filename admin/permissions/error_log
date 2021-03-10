@@ -1,0 +1,20 @@
+[13-Feb-2021 07:52:34 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'mattbzco_779ccb2'@'localhost' (using password: YES) in /home3/mattbzco/public_html/1710/dylanwp/scouting/admin/permissions/assistant.php on line 22
+[13-Feb-2021 07:52:34 America/Boise] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home3/mattbzco/public_html/1710/dylanwp/scouting/admin/permissions/assistant.php on line 29
+[13-Feb-2021 07:52:34 America/Boise] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, bool given in /home3/mattbzco/public_html/1710/dylanwp/scouting/admin/permissions/assistant.php on line 30
+[13-Feb-2021 07:52:34 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home3/mattbzco/public_html/1710/dylanwp/scouting/admin/permissions/assistant.php:38
+Stack trace:
+#0 {main}
+  thrown in /home3/mattbzco/public_html/1710/dylanwp/scouting/admin/permissions/assistant.php on line 38
+[13-Feb-2021 08:00:59 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'mattbzco_779ccb2'@'localhost' (using password: YES) in /home3/mattbzco/public_html/1710/dylanwp/scouting/admin/permissions/assistant.php on line 22
+[13-Feb-2021 08:00:59 America/Boise] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home3/mattbzco/public_html/1710/dylanwp/scouting/admin/permissions/assistant.php on line 29
+[13-Feb-2021 08:00:59 America/Boise] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, bool given in /home3/mattbzco/public_html/1710/dylanwp/scouting/admin/permissions/assistant.php on line 30
+[13-Feb-2021 08:00:59 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home3/mattbzco/public_html/1710/dylanwp/scouting/admin/permissions/assistant.php:38
+Stack trace:
+#0 {main}
+  thrown in /home3/mattbzco/public_html/1710/dylanwp/scouting/admin/permissions/assistant.php on line 38
+[13-Feb-2021 08:24:11 America/Boise] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home3/mattbzco/public_html/1710/dylanwp/scouting/admin/permissions/assistant.php on line 57
+[13-Feb-2021 12:24:26 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/mattbzco/public_html/1710/dylanwp/scouting/admin/permissions/assistant.php on line 58
+[13-Feb-2021 12:24:57 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/mattbzco/public_html/1710/dylanwp/scouting/admin/permissions/assistant.php on line 58
+[13-Feb-2021 12:26:21 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/mattbzco/public_html/1710/dylanwp/scouting/admin/permissions/assistant.php on line 58
+[13-Feb-2021 12:26:24 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/mattbzco/public_html/1710/dylanwp/scouting/admin/permissions/assistant.php on line 58
+[13-Feb-2021 12:26:36 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/mattbzco/public_html/1710/dylanwp/scouting/admin/permissions/assistant.php on line 58
