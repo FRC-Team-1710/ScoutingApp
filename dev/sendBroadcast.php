@@ -44,5 +44,8 @@
     $sql = "UPDATE users SET unreadNotification = '$notification'";
     $result = $conn->query($sql);
 
+    $_SESSION["alert"] = true;
+    $_SESSION["prompt"] = "Notification broadcasted successfully";
+
     header('Location: broadcast.php');
 ?>
