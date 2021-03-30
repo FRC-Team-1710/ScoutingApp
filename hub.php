@@ -83,7 +83,7 @@
                     <div class="col-xs-12 pt-3">
                         <a href="feedback.php">
                             <button class="btn btn-primary">Feedback</button>
-                        </a>
+                        </a> 
                     </div>
                     <div class="col-xs-12 pt-3">
                         <a href="notifications.php">

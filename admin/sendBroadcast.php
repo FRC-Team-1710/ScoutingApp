@@ -29,6 +29,9 @@
     $author = $_SESSION["fName"] . " " . $_SESSION["lName"];
     $time = date("h:i");
 
+    $permittedChars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    $code = substr(str_shuffle($permittedChars), 0, 10);
+
     //Generate Permission Value
     $perms = 100000;
     if($_POST["headScout"] == "on") {
@@ -47,7 +50,7 @@
         $perms += 1;
     }
 
-    $sql = "INSERT INTO notifications (Team, Permission, Author, Message, Time) VALUES ('$team', '$perms', '$author', ?, '$time')";
+    $sql = "INSERT INTO notifications (Team, Permission, Author, Message, Time, Code) VALUES ('$team', '$perms', '$author', ?, '$time', '$code')";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)) {
         echo "There was an error";
