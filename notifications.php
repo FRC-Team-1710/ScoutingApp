@@ -44,7 +44,20 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
         <!--FontAwesome import-->
-        <!-- <script src="https://kit.fontawesome.com/eb8581ba7a.js" crossorigin="anonymous"></script> -->
+        <script src="https://kit.fontawesome.com/eb8581ba7a.js" crossorigin="anonymous"></script>
+        <script>
+            function deleteNotification(code) {
+                $.ajax({
+                    type: "POST",
+                    url: 'server/deleteNotification.php',
+                    data:{action:code},
+                    success:function() {
+                        var element = document.getElementById(code);
+                        element.parentNode.removeChild(element);
+                    }
+                });
+            }
+        </script>
     </head>
     <body style="background-color:rgb(54,59,66)">
         <div class="container">
@@ -53,8 +66,8 @@
                 <h2 class="display-4 text-white text-center">Notifications</h2>
             </div>
             <hr style="width:80%;border:1px solid white">
-            <table style="width:80vw" class="table table-striped table-light mt-5">
-                <tbody>
+            <!-- <table style="width:80vw" class="table table-striped table-light mt-5"> -->
+                <!-- <tbody> -->
                     <!--in a php loop-->
                     <?php
                         //get the references from the user column
@@ -70,17 +83,34 @@
                                 $author = $row["Author"];
                                 $msg = $row["Message"];
                                 $time = $row["Time"];
+                                $date = $row["Date"];
+                                // echo '
+                                // <tr>
+                                //     <td style="word-wrap: break-word">
+                                //         '.$author.': '.$msg.'
+                                //     </td>
+                                //     <td> '.$time.
+                                //         // '<div id="2" style="float:right;">
+                                //         //     <i class="far fa-trash-alt" style="color:black;width:30px;height:30px"></i>
+                                //         // </div>
+                                //     '</td>
+                                // </tr>
+                                // ';
                                 echo '
-                                <tr>
-                                    <td style="word-wrap: break-word">
-                                        '.$author.': '.$msg.'
-                                    </td>
-                                    <td> '.$time.
-                                        // '<div id="2" style="float:right;">
-                                        //     <i class="far fa-trash-alt" style="color:black;width:30px;height:30px"></i>
-                                        // </div>
-                                    '</td>
-                                </tr>
+                                    <div id="'.$code.'" class="text-white my-3" style="overflow:hidden;background-color:black;border-radius:10px;">
+                                        <div class="mt-3">
+                                            <strong>'.$author.'</strong>
+                                        </div>
+                                        <span style="float:left;" class="m-2 mt-4">
+                                            '.$time.'<br>'.$date.'
+                                        </span>
+                                        <span class="m-2 mt-4" style="font-size:110%;word-wrap:break-word;width:80%">
+                                            '.$msg.'
+                                        </span>
+                                        <span style="float:right;" class="m-2">
+                                            <i class="far fa-trash-alt" style="color:white; width:30px; height:30px" onclick="deleteNotification(\''.$code.'\')"></i>
+                                        </span>
+                                    </div>
                                 ';
                             }
                         }
@@ -120,8 +150,8 @@
                         //     }
                         // }
                     ?>
-                </tbody>
-            </table>
+                <!-- </tbody> -->
+            <!-- </table> -->
             <div class="col-xs-12 my-5">
                 <a href="hub.php">
                     <button type="button" class="btn btn-success" style="position:fixed;width:75%;height:5vh;bottom:25px;margin-left:-37.5%;left:50%">Back to Hub</button>
