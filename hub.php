@@ -87,7 +87,7 @@
                     </div>
                     <div class="col-xs-12 pt-3">
                         <a href="notifications.php">
-                            <button class="btn btn-<?php if($unreadNots == 0) {echo "primary";} else {echo "warning";}?>">Notfications</button>
+                            <button class="btn btn-<?php if($unreadNots == 0) {echo "primary";} else {echo "warning";}?>">Notifications</button>
                         </a>
                     </div>
                     <?php

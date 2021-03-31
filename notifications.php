@@ -26,7 +26,7 @@
     $perms = $_SESSION["perms"];
 
     //Collect notifications
-    $sql = "SELECT notificationReference FROM users";
+    $sql = "SELECT notificationReference FROM users WHERE Username = '$uname'";
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
         $references = $row["notificationReference"];
@@ -58,13 +58,30 @@
                     <!--in a php loop-->
                     <?php
                         //get the references from the user column
-                        
+                        $refs = explode(",", $references);
                         //collect the notifications from the database
-                        for(int i = 0; i < numNots; i++) {
+                        for($i = 0; $i < count($refs); $i++) {
+                            $code = $refs[$i];
+                            
                             $sql = "SELECT * FROM notifications WHERE Code = '$code'";
                             $result = $conn->query($sql);
                             while($row = $result->fetch_assoc()) {
                                 //print the notifications onto the screen
+                                $author = $row["Author"];
+                                $msg = $row["Message"];
+                                $time = $row["Time"];
+                                echo '
+                                <tr>
+                                    <td style="word-wrap: break-word">
+                                        '.$author.': '.$msg.'
+                                    </td>
+                                    <td> '.$time.
+                                        // '<div id="2" style="float:right;">
+                                        //     <i class="far fa-trash-alt" style="color:black;width:30px;height:30px"></i>
+                                        // </div>
+                                    '</td>
+                                </tr>
+                                ';
                             }
                         }
 
