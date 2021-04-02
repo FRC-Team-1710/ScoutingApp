@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $isSessionValid = $_SESSION["isSessionValid"];
     if(!$isSessionValid) {
         header('Location: ../hub.php');
@@ -26,13 +27,16 @@
     while($row = $result->fetch_assoc()) {
         $references = $row["notificationReference"];
     }
-    echo $references;
     $refs = explode(",", $references);
-    //generate new string without code
-    $newRefs = ",";
+    //generate new string without notification
+    $newRefs = "";
     for($i = 0; $i < count($refs); $i++) {
         if($refs[$i] !== $code) {
-            $newRefs .= ",".$refs[$i];
+            if($i == 0) {
+                $newRefs .= $refs[$i];
+            } else {
+                $newRefs .= "," . $refs[$i];
+            }
         }
     }
 

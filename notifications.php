@@ -19,6 +19,33 @@
         die("Error: " . $conn->mysqli_error);
     }
 
+    $uname = $_SESSION["uName"];
+
+    $code = "yfxX7G12Kz";
+
+    $sql = "SELECT notificationReference FROM users WHERE Username = '$uname'";
+    $result = $conn->query($sql);
+    while($row = $result->fetch_assoc()) {
+        $references = $row["notificationReference"];
+    }
+    $refs = explode(",", $references);
+    //generate new string without notification
+    $newRefs = "";
+    for($i = 0; $i < count($refs); $i++) {
+        if($refs[$i] !== $code) {
+            if($i == 0) {
+                $newRefs .= $refs[$i];
+            } else {
+                $newRefs .= "," . $refs[$i];
+            }
+        }
+    }
+
+    $sql = "UPDATE users SET notificationReference = '$newRefs' WHERE Username = '$uname'";
+    $result = $conn->query($sql);
+
+    ////////////////////////////////////////////////////////////
+
     $sql = "UPDATE users SET unreadNotification = 0 WHERE Username = '$uname'";
     $result = $conn->query($sql);
 
