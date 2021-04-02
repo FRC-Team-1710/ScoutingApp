@@ -124,14 +124,14 @@
                                 // </tr>
                                 // ';
                                 echo '
-                                    <div id="'.$code.'" class="text-white my-3" style="overflow:hidden;background-color:black;border-radius:10px;">
-                                        <div class="mt-3">
-                                            <strong>'.$author.'</strong>
-                                        </div>
-                                        <span style="float:left;" class="m-2 mt-4">
+                                    <div id="'.$code.'" class="text-white my-3" style="overflow:hidden;background-color:black;border-radius:10px;display:flex;justify-content:center;align-items:center">
+                                        <span style="float:left;" class="m-2">
                                             '.$time.'<br>'.$date.'
                                         </span>
-                                        <span class="m-2 mt-4" style="font-size:110%;word-wrap:break-word;width:80%">
+                                        <span class="m-2">
+                                            <strong>'.$author.'</strong>
+                                        </span>
+                                        <span class="m-2" style="font-size:110%;word-wrap:break-word;width:80%">
                                             '.$msg.'
                                         </span>
                                         <span style="float:right;" class="m-2">
