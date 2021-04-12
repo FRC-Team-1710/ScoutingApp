@@ -75,12 +75,12 @@
                             <!-- <tr>
                                 <th scope="row">2.7</th>
                                 <td></td>
-                                <td>Added a scheduling system so head scouts can schedule shifts for scouts. Scouts can see this in the scout page</td>
+                                <td>Added a messaging system so that scouts can request changes to schedule from head scout</td>
                             </tr> -->
                             <!-- <tr>
                                 <th scope="row">2.6</th>
                                 <td></td>
-                                <td>Added a messaging and an internal notification system so that those with the correct permissions can broadcast messages to their team, while team members can send private messages to head scouts</td>
+                                <td>Added a scheduling system so head scouts can schedule shifts for scouts. Scouts can see this in the scout page</td>
                             </tr> -->
                             <tr>
                                 <th scope="row">2.5</th>

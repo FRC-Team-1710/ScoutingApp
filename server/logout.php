@@ -8,5 +8,6 @@
     $_SESSION["perms"] = NULL;
     $_SESSION["shekels"] = NULL;
     $_SESSION["prompt"] = NULL;
+    session_destroy();
     header('Location: ../index.php');
 ?>

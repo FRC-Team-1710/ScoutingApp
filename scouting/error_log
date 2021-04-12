@@ -1,0 +1,6 @@
+[30-Jan-2021 22:03:16 America/Boise] PHP Parse error:  syntax error, unexpected '$conn' (T_VARIABLE), expecting ')' in /home3/mattbzco/public_html/1710/dylanwp/scouting/scouting/index.php on line 24
+[30-Jan-2021 22:05:04 America/Boise] PHP Parse error:  syntax error, unexpected '$conn' (T_VARIABLE), expecting ')' in /home3/mattbzco/public_html/1710/dylanwp/scouting/scouting/index.php on line 24
+[30-Jan-2021 22:05:08 America/Boise] PHP Parse error:  syntax error, unexpected '$conn' (T_VARIABLE), expecting ')' in /home3/mattbzco/public_html/1710/dylanwp/scouting/scouting/index.php on line 24
+[30-Jan-2021 22:08:50 America/Boise] PHP Parse error:  syntax error, unexpected '$conn' (T_VARIABLE), expecting ')' in /home3/mattbzco/public_html/1710/dylanwp/scouting/scouting/index.php on line 24
+[30-Jan-2021 22:09:04 America/Boise] PHP Parse error:  syntax error, unexpected '$conn' (T_VARIABLE), expecting ')' in /home3/mattbzco/public_html/1710/dylanwp/scouting/scouting/index.php on line 24
+[30-Jan-2021 22:09:59 America/Boise] PHP Parse error:  syntax error, unexpected '$conn' (T_VARIABLE), expecting ')' in /home3/mattbzco/public_html/1710/dylanwp/scouting/scouting/index.php on line 24

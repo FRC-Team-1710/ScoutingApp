@@ -33,12 +33,12 @@ session_start();
             We are currently under construction. Sorry for the inconvenience!
         </h3>
             <?php
-                if($_SESSION['alert'] && ($_SESSION["prompt"] != "Account successfully created. Log in to get started.")) {    
+                if($_SESSION['alert'] && ($_SESSION["prompt"] != "Account successfully created. Log in to get started." && $_SESSION["prompt"] != "Success! Check email for further instructions.")) {    
                     echo '
                     <div class="alert alert-danger" role="alert"> ' .
                         $_SESSION["prompt"] .                        
                     '</div>';
-                } else if($_SESSION['alert'] && ($_SESSION['prompt'] == "Account successfully created. Log in to get started.")) {
+                } else if($_SESSION['alert'] && ($_SESSION['prompt'] == "Account successfully created. Log in to get started." || $_SESSION["prompt"] == "Success! Check email for further instructions.")) {
                     echo '
                     <div class="alert alert-success" role="alert"> ' .
                         $_SESSION["prompt"] .                        
@@ -66,6 +66,11 @@ session_start();
             <div class="col-xs-12 pt-5">
                 <a href="createAccount.php">
                     <button class="btn btn-primary m-2">No Account? Click here</button>
+                </a>
+            </div>
+            <div class="col-xs-12 pt-1">
+                <a href="forgotPassword.php">
+                    <button class="btn btn-primary m-2">Forgot Password? Click here</button>
                 </a>
             </div>
         </center>

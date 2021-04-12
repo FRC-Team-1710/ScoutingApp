@@ -17,11 +17,15 @@
         die("Error: " . $conn->mysqli_error);
     }
 
+    $uname = $_SESSION["uName"];
     $team = $_SESSION["Team"];
-    $perms = $_SESSION["perms"];
+    $devTeam = 34522;
+
+    $sql = "UPDATE users SET unreadNotification = 0 WHERE Username = '$uname'";
+    $result = $conn->query($sql);
 
     //Collect notifications
-    $sql = "SELECT * FROM notifications WHERE Team = '$team'";
+    $sql = "SELECT * FROM notifications WHERE Team = '$team' || Team = '$devTeam'";
     $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
@@ -49,22 +53,24 @@
                     <!--in a php loop-->
                     <?php
                         //Display notifications for each existing notification
+                        $validPerm = false;
                         while($row = $result->fetch_assoc()) {
-                            $validMessage = false;
-                            if($perms == 1 && ($row["Permission"]/10000)%2 != 0) {
-                                $validMessage = true;
-                            } else if($perms == 2 && ($row["Permission"]/1000)%2 != 0) {
-                                $validMessage = true;
-                            } else if($perms == 3 && ($row["Permission"]/100)%2 != 0) {
-                                $validMessage = true;
-                            } else if($perms == 4 && ($row["Permission"]/10)%2 != 0) {
-                                $validMessage = true;
-                            } else if($perms == 5 && ($row["Permission"]/1)%2 != 0) {
-                                $validMessage = true;
-                            } else if($perms == 6) {
-                                $validMessage = true;
+                            //collect permission information
+                            if($_SESSION["perms"] == 1 && ($row["perms"]/10000)%2 != 0) {
+                                $validPerm = true;
+                            } else if($_SESSION["perms"] == 2 && ($row["perms"]/1000)%2 != 0) {
+                                $validPerm = true;
+                            } else if($_SESSION["perms"] == 3 && ($row["perms"]/100)%2 != 0) {
+                                $validPerm = true;
+                            } else if($_SESSION["perms"] == 4 && ($row["perms"]/10)%2 != 0) {
+                                $validPerm = true;
+                            } else if($_SESSION["perms"] == 5 && ($row["perms"]/1)%2 != 0) {
+                                $validPerm = true;
+                            } else if($_SESSION["perms"] == 6) {
+                                $validPerm = true;
                             }
-                            if($validMessage) {
+
+                            if($validPerm) {
                                 $author = $row["Author"];
                                 $msg = $row["Message"];
                                 $time = $row["Time"];
@@ -73,10 +79,8 @@
                                     <td>
                                         <strong>'.$author.': </strong>'.$msg.'
                                     </td>
-                                    <td> '.$time.
-                                        // <div id="2" style="float:right;">
-                                        //     <i class="far fa-trash-alt" style="color:black;width:30px;height:30px"></i>
-                                        // </div>
+                                    <td> '
+                                        .$time.
                                     '</td>
                                 </tr>
                                 ';

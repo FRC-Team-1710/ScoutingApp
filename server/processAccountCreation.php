@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $verifyEmail = true;
     $verifyUsername = true;
     $verifyPassword = true;
     $verifyAuthKey = false;
@@ -11,6 +12,7 @@
     $dbname = "mattbzco_Scouting";
 
     //Post variables
+    $email = $_POST["email"];
     $fname = $_POST["fname"];
     $lname = $_POST["lname"];
     $uname = $_POST["uname"];
@@ -30,6 +32,17 @@
     // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
+    }
+
+    //Verify email isn't taken
+    $sql = "SELECT Email FROM users";
+    $result = $conn->query($sql);
+    while($row = $result->fetch_assoc()) {
+        if($row["Email"] == $email) {
+            $verifyEmail = false;
+            $_SESSION["alert"] = true;
+            $_SESSION["prompt"] = "That email is already in use!";
+        }
     }
 
     //Verify username isn't taken
@@ -96,13 +109,13 @@
     
     if($verifyPassword && $verifyUsername && $verifyAuthKey) {  
         $hash = password_hash($psw, PASSWORD_DEFAULT); 
-        $sql = "INSERT INTO users (Username, FirstName, LastName, Password, Team, Shekels, Permissions) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO users (Email, Username, FirstName, LastName, Password, Team, Shekels, Permissions) VALUES (?, ?, ?, ?, ?, ?, ?)";
         
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)) {
              echo "There's an error";
         } else {
-            mysqli_stmt_bind_param($stmt, "ssssiii", $uname, $fname, $lname, $hash, $team, $shekel, $perms);
+            mysqli_stmt_bind_param($stmt, "ssssiii", $email, $uname, $fname, $lname, $hash, $team, $shekel, $perms);
             mysqli_stmt_execute($stmt);
             $_SESSION["alert"] = true;
             $_SESSION["prompt"] = "Account successfully created. Log in to get started.";

@@ -1,0 +1,61 @@
+[09-Jan-2021 09:29:40 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/index.php on line 14
+[09-Jan-2021 09:37:05 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/index.php on line 14
+[11-Jan-2021 15:45:58 America/Boise] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/feedback.php on line 64
+[11-Jan-2021 15:48:13 America/Boise] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/feedback.php on line 64
+[12-Jan-2021 17:11:19 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/isRead.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/isRead.php on line 22
+[12-Jan-2021 17:14:35 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/isRead.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/isRead.php on line 22
+[12-Jan-2021 17:44:17 America/Boise] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/feedback.php on line 66
+[12-Jan-2021 17:44:19 America/Boise] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/feedback.php on line 66
+[12-Jan-2021 17:47:26 America/Boise] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/feedback.php on line 66
+[12-Jan-2021 17:47:27 America/Boise] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/feedback.php on line 66
+[12-Jan-2021 17:48:11 America/Boise] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/feedback.php on line 66
+[12-Jan-2021 17:50:21 America/Boise] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/feedback.php on line 66
+[12-Jan-2021 17:50:34 America/Boise] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/feedback.php on line 66
+[12-Jan-2021 17:51:12 America/Boise] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/feedback.php on line 66
+[12-Jan-2021 17:51:36 America/Boise] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/feedback.php on line 66
+[12-Jan-2021 17:51:53 America/Boise] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/feedback.php on line 66
+[12-Jan-2021 17:51:55 America/Boise] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/feedback.php on line 66
+[12-Jan-2021 17:55:28 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/isRead.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/isRead.php on line 22
+[12-Jan-2021 17:55:41 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/isRead.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/isRead.php on line 22
+[12-Jan-2021 17:55:43 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/isRead.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/isRead.php on line 22
+[28-Jan-2021 18:27:09 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/isRead.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/isRead.php on line 22
+[28-Jan-2021 18:49:30 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/isRead.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/isRead.php on line 22
+[30-Jan-2021 18:17:23 America/Boise] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/deleteFeedback.php on line 27
+[30-Jan-2021 18:17:28 America/Boise] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/deleteFeedback.php on line 27
+[30-Jan-2021 18:18:12 America/Boise] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/deleteFeedback.php on line 27
+[30-Jan-2021 18:18:22 America/Boise] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/deleteFeedback.php on line 27
+[30-Jan-2021 18:22:50 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/shekelBank.php on line 79
+[30-Jan-2021 18:27:41 America/Boise] PHP Warning:  mysqli_stmt_bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/giveDev.php on line 29
+[02-Feb-2021 17:16:00 America/Boise] PHP Warning:  mysqli_stmt_bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/giveDev.php on line 29
+[04-Feb-2021 18:28:24 America/Boise] PHP Warning:  mysqli_stmt_bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/giveDev.php on line 29
+[08-Feb-2021 14:49:52 America/Boise] PHP Warning:  mysqli_stmt_bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/giveDev.php on line 29
+[09-Feb-2021 17:14:32 America/Boise] PHP Warning:  mysqli_stmt_bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/giveDev.php on line 29
+[09-Feb-2021 17:14:41 America/Boise] PHP Warning:  mysqli_stmt_bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/giveDev.php on line 29
+[09-Feb-2021 17:14:50 America/Boise] PHP Warning:  mysqli_stmt_bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home3/mattbzco/public_html/1710/dylanwp/scouting/dev/giveDev.php on line 29
