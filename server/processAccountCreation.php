@@ -56,7 +56,7 @@
         }
     }
 
-    if($verifyUsername) {
+    if($verifyUsername && $verifyEmail) {
         //Verify passwords match
         if($psw != $pswd) {
             $verifyPassword = false;

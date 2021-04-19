@@ -33,12 +33,12 @@ session_start();
             We are currently under construction. Sorry for the inconvenience!
         </h3>
             <?php
-                if($_SESSION['alert'] && ($_SESSION["prompt"] != "Account successfully created. Log in to get started." && $_SESSION["prompt"] != "Success! Check email for further instructions.")) {    
+                if($_SESSION['alert'] && ($_SESSION["prompt"] != "Account successfully created. Log in to get started." && $_SESSION["prompt"] != "Success! Check email for further instructions." && $_SESSION["prompt"] != "Password changed successfully!")) {    
                     echo '
                     <div class="alert alert-danger" role="alert"> ' .
                         $_SESSION["prompt"] .                        
                     '</div>';
-                } else if($_SESSION['alert'] && ($_SESSION['prompt'] == "Account successfully created. Log in to get started." || $_SESSION["prompt"] == "Success! Check email for further instructions.")) {
+                } else if($_SESSION['alert'] && ($_SESSION['prompt'] == "Account successfully created. Log in to get started." || $_SESSION["prompt"] == "Success! Check email for further instructions." || $_SESSION["prompt"] == "Password changed successfully!")) {
                     echo '
                     <div class="alert alert-success" role="alert"> ' .
                         $_SESSION["prompt"] .                        

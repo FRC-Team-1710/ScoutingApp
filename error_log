@@ -68,3 +68,43 @@ Stack trace:
 #0 {main}
   thrown in /home3/mattbzco/public_html/1710/dylanwp/scouting/hub.php on line 20
 [09-Mar-2021 17:53:00 America/Boise] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home3/mattbzco/public_html/1710/dylanwp/scouting/hub.php on line 61
+[30-Mar-2021 18:56:18 America/Boise] PHP Parse error:  syntax error, unexpected 'i' (T_STRING), expecting ';' in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 63
+[30-Mar-2021 18:57:17 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 64
+[30-Mar-2021 18:57:17 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 64
+[30-Mar-2021 18:57:17 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 64
+[30-Mar-2021 18:57:52 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 64
+[30-Mar-2021 18:57:52 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 64
+[30-Mar-2021 18:57:52 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 64
+[30-Mar-2021 18:59:18 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 64
+[30-Mar-2021 18:59:18 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 64
+[30-Mar-2021 19:06:52 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 64
+[30-Mar-2021 19:06:52 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 64
+[30-Mar-2021 19:08:26 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 64
+[30-Mar-2021 19:08:26 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 64
+[30-Mar-2021 19:10:48 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 64
+[30-Mar-2021 19:10:48 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 64
+[30-Mar-2021 19:11:34 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 64
+[30-Mar-2021 19:11:34 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 64
+[30-Mar-2021 19:14:04 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 65
+[30-Mar-2021 19:14:04 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 65
+[30-Mar-2021 19:20:21 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 65
+[30-Mar-2021 19:20:21 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 65
+[30-Mar-2021 19:20:21 America/Boise] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 65
+[31-Mar-2021 08:40:33 America/Boise] PHP Parse error:  syntax error, unexpected ''' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 93
+[31-Mar-2021 08:49:54 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 16
+[31-Mar-2021 08:49:54 America/Boise] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 23
+[31-Mar-2021 08:49:54 America/Boise] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 30
+[31-Mar-2021 08:49:54 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php:31
+Stack trace:
+#0 {main}
+  thrown in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 31
+[31-Mar-2021 09:08:11 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 16
+[31-Mar-2021 09:08:11 America/Boise] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 23
+[31-Mar-2021 09:08:11 America/Boise] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 30
+[31-Mar-2021 09:08:11 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php:31
+Stack trace:
+#0 {main}
+  thrown in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 31
+[31-Mar-2021 09:13:38 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home3/mattbzco/public_html/1710/dylanwp/scouting/hub.php on line 15
+[31-Mar-2021 16:04:58 America/Boise] PHP Recoverable fatal error:  Object of class mysqli_result could not be converted to string in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 31
+[31-Mar-2021 17:18:35 America/Boise] PHP Parse error:  syntax error, unexpected '=' in /home3/mattbzco/public_html/1710/dylanwp/scouting/notifications.php on line 42

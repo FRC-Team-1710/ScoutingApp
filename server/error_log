@@ -79,3 +79,19 @@ Stack trace:
 [30-Jan-2021 09:30:21 America/Boise] PHP Fatal error:  Only variables can be passed by reference in /home3/mattbzco/public_html/1710/dylanwp/scouting/server/processAccountCreation.php on line 104
 [30-Jan-2021 09:38:06 America/Boise] PHP Fatal error:  Only variables can be passed by reference in /home3/mattbzco/public_html/1710/dylanwp/scouting/server/processAccountCreation.php on line 104
 [30-Jan-2021 18:19:57 America/Boise] PHP Parse error:  syntax error, unexpected '=' in /home3/mattbzco/public_html/1710/dylanwp/scouting/server/deleteAccount.php on line 44
+[12-Apr-2021 14:56:12 America/Boise] PHP Parse error:  syntax error, unexpected 'mail' (T_STRING) in /home3/mattbzco/public_html/1710/dylanwp/scouting/server/pswResetEmail.php on line 30
+[12-Apr-2021 14:59:00 America/Boise] PHP Parse error:  syntax error, unexpected 'mail' (T_STRING) in /home3/mattbzco/public_html/1710/dylanwp/scouting/server/pswResetEmail.php on line 30
+[12-Apr-2021 14:59:15 America/Boise] PHP Parse error:  syntax error, unexpected 'mail' (T_STRING) in /home3/mattbzco/public_html/1710/dylanwp/scouting/server/pswResetEmail.php on line 30
+[12-Apr-2021 15:02:39 America/Boise] PHP Parse error:  syntax error, unexpected '$_SESSION' (T_VARIABLE) in /home3/mattbzco/public_html/1710/dylanwp/scouting/server/pswResetEmail.php on line 32
+[12-Apr-2021 15:02:53 America/Boise] PHP Parse error:  syntax error, unexpected '$_SESSION' (T_VARIABLE) in /home3/mattbzco/public_html/1710/dylanwp/scouting/server/pswResetEmail.php on line 32
+[12-Apr-2021 15:05:40 America/Boise] PHP Parse error:  syntax error, unexpected '$_SESSION' (T_VARIABLE) in /home3/mattbzco/public_html/1710/dylanwp/scouting/server/pswResetEmail.php on line 32
+[12-Apr-2021 15:06:03 America/Boise] PHP Parse error:  syntax error, unexpected '$_SESSION' (T_VARIABLE) in /home3/mattbzco/public_html/1710/dylanwp/scouting/server/pswResetEmail.php on line 32
+[12-Apr-2021 15:08:21 America/Boise] PHP Parse error:  syntax error, unexpected '$_SESSION' (T_VARIABLE) in /home3/mattbzco/public_html/1710/dylanwp/scouting/server/pswResetEmail.php on line 32
+[12-Apr-2021 15:10:47 America/Boise] PHP Parse error:  syntax error, unexpected '$_SESSION' (T_VARIABLE) in /home3/mattbzco/public_html/1710/dylanwp/scouting/server/pswResetEmail.php on line 32
+[12-Apr-2021 16:12:45 America/Boise] PHP Parse error:  syntax error, unexpected '$_SESSION' (T_VARIABLE) in /home3/mattbzco/public_html/1710/dylanwp/scouting/server/pswResetEmail.php on line 32
+[12-Apr-2021 17:19:06 America/Boise] PHP Parse error:  syntax error, unexpected 'header' (T_STRING) in /home3/mattbzco/public_html/1710/dylanwp/scouting/server/pswResetEmail.php on line 38
+[12-Apr-2021 17:23:35 America/Boise] PHP Parse error:  syntax error, unexpected 'header' (T_STRING) in /home3/mattbzco/public_html/1710/dylanwp/scouting/server/pswResetEmail.php on line 38
+[12-Apr-2021 17:24:59 America/Boise] PHP Parse error:  syntax error, unexpected 'header' (T_STRING) in /home3/mattbzco/public_html/1710/dylanwp/scouting/server/pswResetEmail.php on line 38
+[14-Apr-2021 15:54:00 America/Boise] PHP Parse error:  syntax error, unexpected ')' in /home3/mattbzco/public_html/1710/dylanwp/scouting/server/changePassword.php on line 2
+[14-Apr-2021 15:56:19 America/Boise] PHP Parse error:  syntax error, unexpected ')' in /home3/mattbzco/public_html/1710/dylanwp/scouting/server/changePassword.php on line 2
+[14-Apr-2021 15:56:33 America/Boise] PHP Parse error:  syntax error, unexpected 'header' (T_STRING) in /home3/mattbzco/public_html/1710/dylanwp/scouting/server/changePassword.php on line 41

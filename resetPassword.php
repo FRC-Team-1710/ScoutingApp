@@ -1,5 +1,9 @@
 <?php
-session_start();
+    session_start();
+    if(!$_GET['user']){
+        header('Location: ../forgotPassword.php');
+    }
+    $uname = base64_decode(urldecode($_GET['user']))
 ?>
 
 <!DOCTYPE html>
@@ -37,16 +41,25 @@ session_start();
                 </div>
                 ';
                 }
+                echo'
+                <h3 class="text-white text-center">
+                    Hello, ' . $uname . '!
+                </h3>
+                <h3 class="text-white text-center">
+                    Enter your new password:
+                </h3>';
             ?>
-            <h3 class="text-white text-center">
-                Enter your account's email to reset your password
-            </h3>
-            <form action="server/pswResetEmail.php" method=post>
-                <label for="email" class="pt-2">
-                    <b class="text-white">Email:</b>
-                </label>
+            <form action="../server/changePassword.php" method=post>
+                <?php
+                    echo '<input type="hidden" name="user" value='.$uname.'>';
+                ?>
                 <div class="col-xs-12 pt-1">
-                    <input type="email" autocomplete="off" placeholder="Enter your email" name="email" maxlength="100" required>
+                    <input id="input1" autocomplete="off" type="password" style="position:relative; left:12px;" maxlength="32" placeholder="Enter Password" name="psw" required>
+                    <i  id="eye1" class="fas fa-eye" style="position:relative; right:20px;" onclick="togglePasswordDisplay('input1', 'eye1');"></i>
+                </div>
+                <div class="col-xs-12 pt-1">
+                    <input id="input2" autocomplete="off" type="password" style="position:relative; left:12px;" maxlength="32" placeholder="Retype Password" name="pswd" required>
+                    <i  id="eye2" class="fas fa-eye" style="position:relative; right:20px;" onclick="togglePasswordDisplay('input2', 'eye2');"></i>
                 </div>
                 <div class="col-xs-2 pt-3">
                     <button type="submit" class="btn btn-success btn-lg mt-2">Submit</button>

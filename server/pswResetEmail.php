@@ -19,22 +19,23 @@
 
     $_SESSION['alert']=true;
     //Verify email is valid
-    $sql = "SELECT Email FROM users";
+    $sql = "SELECT Email, Username, FirstName FROM users";
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
         if($row["Email"] == $email) {
             $verifyEmail = true;
+            $uname = $row["Username"];
             $fname = $row["FirstName"];
 
-            //$msg = "Hello, " . $fname . "!\n\nThis feature is a work in progress, but if it were finished you would be receiving a link to reset your account password."
-            //mail($email, 'Scouting Password Reset', $msg);
+            $msg = "Hello, " . $fname . "!\n\nChange your password by going to https://team1710.com/scouting/resetPassword.php/?user=" . urlencode(base64_encode($uname));
+            mail($email, 'Scouting Password Reset', $msg);
 
-            $_SESSION["prompt"]="Success! Check email for further instructions.";
+            $_SESSION['prompt']="Success! Check email for further instructions.";
             header('Location: ../index.php');
         }
     }
     if($verifyEmail == false){
-        $_SESSION['prompt'] = "There is no account under the email you entered."
+        $_SESSION['prompt'] = "There is no account under the email you entered.";
         header('Location: ../forgotPassword.php');
     }
 ?>
