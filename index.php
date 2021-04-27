@@ -47,10 +47,10 @@ session_start();
             ?>
             <form action="server/login.php" method="post" id="securityForm">
                 <label for="uname" class="pt-2">
-                    <b class="text-white">Username:</b>
+                    <b class="text-white">Username or Email:</b>
                 </label>
                 <div class="col-xs-12 pt-1">
-                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <input type="text" placeholder="Enter Username or Email" name="uname" required>
                 </div>
                 <label for="psw" class="pt-2">
                     <b class="text-white">Password:</b>

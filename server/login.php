@@ -7,6 +7,8 @@ $password = "q1w2E#R$";
 $dbname = "mattbzco_Scouting";
 $usernameCheck = false;
 
+$loginMethod = "Username";
+
 //Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -14,18 +16,27 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-//only do below stuff if username exists
+
 $uname = $_POST["uname"];
-$sql = "SELECT Username FROM users";
+
+//check to see whether a username or email address was entered
+if(strpos($uname, '@') && strrpos($uname, '.')){
+    if(strrpos($uname, '.') > strpos($uname, '@')){
+        $loginMethod = 'Email';
+    }
+}
+//only do below stuff if username/email exists
+$sql = "SELECT ".$loginMethod." FROM users";
 $result = $conn->query($sql);
 while($row = $result->fetch_assoc()) {
-    if($row["Username"]==$uname) {
+    if($row[$loginMethod]==$uname) {
         $usernameCheck = true;
     }
 }
+
 if($usernameCheck) {
     $psw = $_POST["psw"];
-    $sql = "SELECT Password FROM users WHERE Username = ?";
+    $sql = "SELECT Password FROM users WHERE ".$loginMethod." = ?";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)) {
         echo "There was an error";
@@ -51,7 +62,7 @@ if($usernameCheck) {
 
 if($loginCheck) {
     //Set Session variables
-    $sql = "SELECT * FROM users WHERE Username = ?";
+    $sql = "SELECT * FROM users WHERE ".$loginMethod." = ?";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)) {
         echo "There was an error";
@@ -76,7 +87,7 @@ if($loginCheck) {
         $_SESSION["isSessionValid"] = true;
     }
 
-    $sql = "UPDATE users SET loginCount='$loginCount' WHERE Username='$uname'";
+    $sql = "UPDATE users SET loginCount='$loginCount' WHERE ".$loginMethod."='$uname'";
     $result = $conn->query($sql);
 
 

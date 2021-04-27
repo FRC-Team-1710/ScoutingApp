@@ -56,6 +56,15 @@
         }
     }
 
+    //Verify username is not an email
+    if(strpos($uname, '@') && strrpos($uname, '.')){
+        if(strrpos($uname, '.') > strpos($uname, '@')){
+            $verifyUsername = false;
+            $_SESSION["alert"] = true;
+            $_SESSION["prompt"] = "That username looks too much like an email!";
+        }
+    }
+
     if($verifyUsername && $verifyEmail) {
         //Verify passwords match
         if($psw != $pswd) {
