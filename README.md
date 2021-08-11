@@ -1,1 +1,1 @@
-"# ScoutingApp" 
+# ScoutingApp
